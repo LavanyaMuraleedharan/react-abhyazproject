@@ -1,0 +1,156 @@
+/* Make the container a flexbox to align the left and right sections */
+.accordion-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Left side of the accordion */
+.left-accordions,
+.right-accordions {
+  width: 48%; /* Each section takes up 48% of the container width */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Accordion Items Styling */
+.accordion-item {
+  background-color: #f8f9fa; /* Light background color */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Accordion Header Styling */
+.accordion-header {
+  background-color: #030303; /* Blue background */
+  color: #fff; /* White text color */
+  font-weight: bold;
+  padding: 15px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.accordion-header:hover {
+  background-color: #262020; /* Darker blue on hover */
+}
+
+/* Accordion Body Styling */
+.accordion-body {
+  background-color: #c9a5a5; /* White background */
+  padding: 20px;
+  font-size: 14px;
+  color: #0e0e0e; /* Darker text color */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top: 1px solid #ddd; /* Border between header and body */
+  line-height: 1.6; /* Better line spacing */
+}
+
+/* Add subtle hover effect on accordion items */
+.accordion-item:hover {
+  transform: translateY(-5px); /* Hover effect with slight lift */
+  box-shadow: 0 5px 10px rgba(179, 154, 154, 0.1); /* Stronger shadow on hover */
+}
+
+/* Accordion item active state styling (when open) */
+.accordion-button:not(.collapsed) {
+  background-color: #0a81ad; /* Active blue when open */
+  color: #070707; /* White text */
+}
+
+.accordion-button:not(.collapsed):hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+/* Styling the new section below the accordion */
+.tab-section {
+  margin-top: 30px; /* Add some space above the tabs */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tab-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #151616; /* Blue color for title */
+  margin-bottom: 20px;
+}
+/* Add space between the tab buttons */
+.custom-tabs .nav-link {
+  background-color: #edf0f3; /* Blue background for tab buttons */
+  color: rgb(31, 29, 29); /* White text color */
+  font-weight: italic;
+  border-radius: 8px 8px 0 0; /* Rounded corners on top */
+  padding: 10px 20px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  justify-content: flex-end;
+  padding-right: 80px;
+}
+
+.custom-tabs .nav-link:hover {
+  background-color: #717982; /* Darker blue on hover */
+}
+
+.custom-tabs .nav-link.active {
+  background-color: #d3d5d7; /* Slightly darker active tab color */
+  border-bottom: 3px solid #cccfd1; /* Add a border at the bottom of active tab */
+}
+
+.tab-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for content */
+}
+
+.tab-content h4 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.tab-content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+.carousel-overlay {
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  transform: none;
+  z-index: 2;
+  text-align: left;
+  margin-top: 200px;
+  color: black;
+}
+
+.carousel-overlay h1 {
+  color: rgb(0, 0, 0);
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+.click-button {
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #13334d, #0056b3);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-bottom: 50px;
+}
